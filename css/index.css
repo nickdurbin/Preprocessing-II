@@ -169,11 +169,13 @@ img {
   margin: 0 auto;
 }
 .nav-container {
+  max-width: 800px;
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-evenly;
-  margin: 30px 0;
+  justify-content: space-between;
+  margin: 30px auto;
 }
 .nav-container .logo {
   font-family: 'Roboto', sans-serif;
@@ -194,7 +196,7 @@ img {
   color: black;
   font-size: 1.6rem;
   font-weight: 600;
-  margin-right: 70px;
+  margin-right: 40px;
 }
 hr {
   border-top: 2px dashed #C0C0C0;

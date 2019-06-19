@@ -1,6 +1,8 @@
 .nav-container {
-  .displayFlex(row nowrap, center, space-evenly);
-  margin: 30px 0;
+  max-width: 800px;
+  width: 100%;
+  .displayFlex(row nowrap, center, space-between);
+  margin: 30px auto;
 
   .logo {
     .navLink(none, black, '');
@@ -13,7 +15,7 @@
     a {
       .navLink(none, black, 1.6rem);
       font-weight: 600;
-      margin-right: 70px;
+      margin-right: 40px;
     }
   }
 }
