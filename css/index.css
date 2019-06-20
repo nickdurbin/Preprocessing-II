@@ -1,3 +1,5 @@
+@tablet (max-width: 650px);
+@mobile (max-width: 500px);
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -209,13 +211,13 @@ img {
   font-size: 1.6rem;
   padding: 20px;
 }
+hr {
+  border-top: 2px dashed #C0C0C0;
+  margin: 0 auto;
+}
 .main-container {
   max-width: 800px;
   width: 100%;
-  margin: 0 auto;
-}
-.main-container hr {
-  border-top: 2px dashed #C0C0C0;
   margin: 0 auto;
 }
 .main-container header {
@@ -272,4 +274,14 @@ img {
 .main-container .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+.main-container .content-pick .destination .btn button {
+  width: 85%;
+  height: 45px;
+  color: white;
+  background-color: #00849a;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
