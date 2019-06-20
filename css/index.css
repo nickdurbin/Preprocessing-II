@@ -1,5 +1,3 @@
-@tablet (max-width: 650px);
-@mobile (max-width: 500px);
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -179,12 +177,22 @@ img {
   justify-content: space-between;
   margin: 30px auto;
 }
+@media (max-width: 500px) {
+  .nav-container {
+    flex-flow: column nowrap;
+  }
+}
 .nav-container .logo {
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
   color: black;
   font-size: '';
   font-weight: 600;
+}
+@media (max-width: 500px) {
+  .nav-container .logo {
+    margin-bottom: 20px;
+  }
 }
 .nav-container nav {
   display: flex;
@@ -197,8 +205,11 @@ img {
   text-decoration: none;
   color: black;
   font-size: 1.6rem;
-  font-weight: 600;
   margin-right: 40px;
+}
+.nav-container nav a:hover {
+  transform: scale(1.2);
+  font-weight: 600;
 }
 .footer {
   width: 100%;
@@ -220,6 +231,11 @@ hr {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .main-container {
+    width: 90%;
+  }
+}
 .main-container header {
   border-bottom: 2px dashed #C0C0C0;
 }
@@ -229,19 +245,39 @@ hr {
 .main-container header .header-txt h1 {
   margin-bottom: 5px;
 }
+@media (max-width: 500px) {
+  .main-container header .header-txt h1 {
+    font-size: 3rem;
+  }
+}
 .main-container .home .content-section {
   margin: 30px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .main-container .home .content-section {
+    width: 100%;
+  }
+}
 .main-container .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
 }
+@media (max-width: 500px) {
+  .main-container .home .content-section .text-content {
+    width: 100%;
+  }
+}
 .main-container .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
+}
+@media (max-width: 500px) {
+  .main-container .home .content-section .img-content {
+    width: 100%;
+  }
 }
 .main-container .home .content-section .img-content img {
   border-radius: 10px;
@@ -249,6 +285,12 @@ hr {
 .main-container .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .main-container .inverse-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 .main-container .inverse-content .text-content {
   padding-left: 1%;
@@ -271,17 +313,38 @@ hr {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .main-container .content-pick {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
 .main-container .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .main-container .content-pick .destination {
+    width: 80%;
+  }
 }
 .main-container .content-pick .destination .btn button {
   width: 85%;
   height: 45px;
   color: white;
-  background-color: #00849a;
+  background-color: #058080;
   border: none;
   border-radius: 10px;
   font-size: 1.8rem;
   font-weight: 600;
+}
+@media (max-width: 500px) {
+  .main-container .content-pick .destination .btn button {
+    width: 100%;
+  }
+}
+.main-container .content-pick .destination .btn button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }

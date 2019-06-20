@@ -8,6 +8,10 @@ hr {
   width: 100%;
   margin: 0 auto;
 
+  @media @mobile {
+    width: 90%;
+  }
+
   header {
     border-bottom: 2px dashed @navigation-border;
   
@@ -16,6 +20,10 @@ hr {
     
       h1 {
         margin-bottom: 5px;
+      
+        @media @mobile {
+          font-size: 3rem;
+        }
       }
     }
   }
@@ -27,14 +35,26 @@ hr {
       flex-wrap: wrap;
       justify-content: space-between;
 
+      @media @mobile {
+        width: 100%;
+      }
+
       .text-content {
         width: 48%;
         padding-right: 1%;
+
+        @media @mobile {
+          width: 100%;
+        }
       }
 
       .img-content {
         width: 48%;
         padding-left: 1%;
+
+        @media @mobile {
+          width: 100%;
+        }
 
         img {
           border-radius: 10px;
@@ -46,6 +66,11 @@ hr {
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -73,14 +98,33 @@ hr {
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
 
+      @media @mobile {
+        width: 80%;
+      }
+
       .btn button {
-        .buttonStyle(85%, 45px, white, @eastern-blue - 30%, none, 10px);
+        .buttonStyle(85%, 45px, white, #058080, none, 10px);
         font-size: 1.8rem;
         font-weight: 600;
+
+        @media @mobile {
+          width: 100%;
+        }
+      }
+
+      .btn button:hover {
+        cursor: pointer;
+        transform: scale(1.1);
       }
     }
   }
