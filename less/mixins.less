@@ -22,36 +22,17 @@
   color: @color;
   background-color: @bg-color;
   border: @border;
-  border-radius: @border-r
+  border-radius: @border-r;
 }
 
-// Animation Stretch Mixin
+// Animation Stretch Mixin 
 
 .keyframes(@name; @arguments) {
-	@keyframes @name { @arguments(); }
+  @keyframes @name {
+    @arguments();
+  }
 }
 
 .animation(@arguments) {
-	animation: @arguments;
-}
-
-.sale {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  color: yellow;
-  width: 200px;
-  height: 100px;
-  background: red;
-  border-radius: 100px;
-  transform: rotate(-15deg);
-
-	.keyframes(fade-in;{
-		0% { opacity: 0; }
-		100% { opacity: 1; }
-		});
-
-	.animation(fade-in 0.4s linear infinite alternate)
-
+  animation: @arguments;
 }
