@@ -1,24 +1,68 @@
-.home {
+hr {
+  border-top: 2px dashed @navigation-border;
+  margin: 0 auto;
+}
 
-  .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.main-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
 
-   
+  @media @mobile {
+    width: 90%;
+  }
+
+  header {
+    border-bottom: 2px dashed @navigation-border;
+  
+    .header-txt {
+      margin: 20px 0 10px 0;
     
-    .text-content {
-      width: 48%;
-      padding-right: 1%;
+      h1 {
+        margin-bottom: 5px;
+      
+        @media @mobile {
+          font-size: 3rem;
+        }
+      }
     }
+  }
 
-    .img-content {
-      width: 48%;
-      padding-left: 1%;
+  .home {
+    .content-section {
+      margin: 30px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
 
-      img {
-        border-radius: 10px;
+      @media @mobile {
+        width: 100%;
+      }
+
+      .text-content {
+        width: 48%;
+        padding-right: 1%;
+
+        @media @mobile {
+          width: 100%;
+        }
+      }
+
+      .img-content {
+        width: 48%;
+        padding-left: 1%;
+
+        @media @mobile {
+          width: 100%;
+        }
+
+        img {
+          border-radius: 10px;
+          
+          @media @mobile {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -26,6 +70,11 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -35,12 +84,22 @@
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile {
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
@@ -53,9 +112,99 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 80%;
+      }
+
+      .btn button {
+        .buttonStyle(85%, 45px, white, #058080, none, 10px);
+        font-size: 1.8rem;
+        font-weight: 600;
+
+        @media @mobile {
+          width: 100%;
+        }
+      }
+
+      .btn button:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
     }
   }
-}// home
+
+  .pick-excursion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 2px dashed @navigation-border;
+
+    .sale {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: yellow;
+      width: 200px;
+      height: 100px;
+      background: red;
+      border-radius: 100px;
+      transform: rotate(-15deg);
+    
+      .keyframes(fade-in;{0% {opacity: 0;} 100% {opacity: 1;}});
+    
+      .animation(fade-in 0.4s linear infinite alternate);
+    }
+
+    .excursion-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px dashed #058080;
+      border-radius: 10px;
+      background-color: #058080 + 80%; 
+      width: 100%;
+      margin: 30px 0;
+      padding: 20px 0;
+
+      textarea {
+        width: 65%;
+      } 
+
+      .btn button {
+        .buttonStyle(100%, 45px, white, #058080, none, 10px);
+        font-size: 1.8rem;
+        font-weight: 600;
+
+        @media @mobile {
+          width: 100%;
+        }
+      }
+
+      .btn button:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
+} // home

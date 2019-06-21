@@ -1,1 +1,33 @@
-// Navigation Styles here
+.nav-container {
+  max-width: 800px;
+  width: 100%;
+  .displayFlex(row nowrap, center, space-between);
+  margin: 30px auto;
+
+  @media @mobile {
+    flex-flow: column nowrap;
+  }
+
+  .logo {
+    .navLink(none, black, '');
+    font-weight: 600;
+
+    @media @mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  nav {
+    .displayFlex(row nowrap, center, space-evenly);
+
+    a {
+      .navLink(none, black, 1.6rem);
+      margin-right: 40px;
+    }
+
+    a:hover {
+      transform: scale(1.2);
+      font-weight: 600;
+    }
+  }
+}
